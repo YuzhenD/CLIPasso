@@ -36,6 +36,7 @@ parser.add_argument('-colab', action='store_true')
 parser.add_argument('-cpu', action='store_true')
 parser.add_argument('-display', action='store_true')
 parser.add_argument('--gpunum', type=int, default=0)
+parser.add_argument('--control_ppoints_per_seg', type=int , default=0) # added by dyz
 
 args = parser.parse_args()
 
