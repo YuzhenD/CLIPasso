@@ -96,7 +96,7 @@ def run(seed, wandb_name):
                             "--mask_object_attention", str(
                                 args.mask_object),
                             "--display_logs", str(int(args.colab)),
-                            "--control_points_per_seg",str(int(args.control_points_per_seg))  # added by dyz
+                            "--control_points_per_seg",str(int(args.control_points_per_seg)),  # added by dyz
                             "--display", str(int(args.display))])
     if exit_code.returncode:
         sys.exit(1)
