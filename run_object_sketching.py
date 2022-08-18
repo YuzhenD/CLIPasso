@@ -35,8 +35,8 @@ parser.add_argument("--multiprocess", type=int, default=0,
 parser.add_argument('-colab', action='store_true')
 parser.add_argument('-cpu', action='store_true')
 parser.add_argument('-display', action='store_true')
+parser.add_argument('--control_points_per_seg', type=int , default=4) # added by dyz
 parser.add_argument('--gpunum', type=int, default=0)
-parser.add_argument('--control_ppoints_per_seg', type=int , default=0) # added by dyz
 
 args = parser.parse_args()
 
@@ -96,6 +96,7 @@ def run(seed, wandb_name):
                             "--mask_object_attention", str(
                                 args.mask_object),
                             "--display_logs", str(int(args.colab)),
+                            "--control_points_per_seg",str(int(args.control_points_per_seg))  # added by dyz
                             "--display", str(int(args.display))])
     if exit_code.returncode:
         sys.exit(1)
